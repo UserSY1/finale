@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+	
+#itemLoad{
+	position: absolute;
+	z-index: 2;
+	width: 1677px ;
+	height: 916px ;
+	left: 0;
+	top: 0;
+}
+
+#background{
+
+	position: absolute;
+	display : flex;
+	z-index: 0;
+	width: 1500px ;
+	height: 900px ;
+	left: 10px;
+	top: 5px;
+	
+}
+#end{
+
+	position: absolute;
+	display : none;
+	z-index: 0;
+	width: 1500px ;
+	height: 900px ;
+	left: 10px;
+	top: 5px;
+	
+}
+#endingBut{
+	background: none;
+	position: absolute;
+	z-index: 0;
+	width: 1500px ;
+	height: 900px ;
+	left: 10px;
+	top: 5px;
+}
+.look {
+
+	position: absolute;
+	height: 50px;
+	width: 60px;
+	z-index: 11;
+	top : 440px;
+
+}
+.look:hover {
+	cursor: pointer;
+	scale : 0.96;
+}
+#larrow{
+
+	left: 60px;
+	
+
+}
+#rarrow{
+
+	left : 1410px;
+}
+#table{
+
+	display : none;
+	position: absolute;
+	top : 350px;
+	left: 420px;
+	z-index: 10;
+	height: 500px;
+	width: 700px;
+
+}
+#leftPic {
+
+	display : none;
+	position: absolute;
+	top: 80px;
+	left: 170px;
+	z-index: 10;
+	height: 500px;
+	width: 220px;
+
+}
+#rightPic {
+
+	display : none;
+	position: absolute;
+	top: 80px;
+	left: 1150px;
+	z-index: 10;
+	height: 500px;
+	width: 230px;
+
+}
+#pigKey {
+
+	display : none;
+	position: absolute;
+	top: 435px;
+	left: 700px;
+	z-index: 11;
+	height: 150px;
+	width: 150px;
+
+}
+#pigKey:hover{
+
+	cursor: pointer;
+	scale: 0.96;
+	filter: brightness(0.8);
+
+}
+#pigbigHead {
+
+	display: none;
+	position: absolute;
+	top: 310px;
+	left: 514px;
+	height: 430px;
+	width: 480px;
+	z-index: 11;
+
+}
+#pigEye{
+
+	display: none;
+	position: absolute;
+	top: 480px;
+	left: 625px;
+	height: 80px;
+	width: 260px;
+	z-index: 10;
+
+}
+#finalCloset{
+
+	display: none;
+	position: absolute;
+	width: 485px;
+	height: 336px;
+	top: 400px;
+	left: 750px;
+	z-index: 10;
+
+}
+#obStatue{
+
+	display: none;
+	position: absolute;
+	height: 600px;
+	width: 340px;
+	top: 200px;
+	left: 250px;
+	z-index: 10;
+
+}
+#obStatue:hover{
+
+	cursor: pointer;
+	scale: 0.96;
+	filter: brightness(0.8);
+
+}
+#statueInt {
+
+	display: none;
+	position: absolute;
+	height: 700px;
+	width: 600px;
+	z-index: 2;
+	top: 198px;
+	left: 500px;
+
+}
+#statueEyeIn{
+
+	position: absolute;
+	display: none;
+	height: 70px;
+	width: 250px;
+	z-index: 3;
+	top: 388px;
+	left: 652px;
+
+}
+#statueEyeIn:hover{
+
+	cursor: pointer;
+	scale: 0.96;
+	filter: brightness(0.8);
+
+}
+#exit{
+	display: none;
+	position: absolute;
+	left: 610px;
+	top: 174px;
+	width: 352px;
+	height: 515px;
+	z-index: 10;
+}
+#candle{
+
+	display : none; 
+	position: absolute;
+	top: 200px;
+	left: 330px;
+	height: 220px;
+	width: 900px;
+	z-index: 10;
+
+}
+#closet{
+
+	position: absolute;
+	display: none;
+	left: 516px;
+	top: 430px;
+	z-index: 10;
+	width: 550px;
+	height: 350px;
+
+}
+#mirror{
+
+	position: absolute;
+	display: none;
+	left: 645px;
+	top: 60px;
+	height: 350px;
+	width: 300px;
+	z-index: 10;
+
+
+}
+#topClos{
+
+	position: absolute;
+	display: none;
+	left: 442px;
+	top: 230px;
+	z-index: 15;
+	height: 260px;
+	width: 672px;
+
+
+}
+#barClos1{
+
+	position: absolute;
+	display: none;
+	left: 467px;
+	top: 487px;
+	height: 9px;
+	width: 624px;
+	z-index: 14;
+
+}
+#closet1{
+
+	position: absolute;
+	display: none;
+	left: 475px;
+	top: 250px;
+	height: 305px;
+	width: 608px;
+	z-index: 13;
+	transition: top 1s ease-in-out;
+
+
+}
+#barClos2{
+
+	position: absolute;
+	display: none;
+	left: 509px;
+	top: 555px;
+	height: 6px;
+	width: 544px;
+	z-index: 13;
+}
+#closet2{
+
+	position: absolute;
+	display: none;
+	left: 506px;
+	top: 336px;
+	width: 544px;
+	height: 271px;
+	z-index: 12;
+	transition: top 1s ease-in-out;
+
+}
+#barClos3{
+
+	position: absolute;
+	display: none;
+	left: 530px;
+	top: 606px;
+	height: 6px;
+	width:500px;
+	z-index: 12;
+}
+#closet3{
+
+	position: absolute;
+	display: none;
+	left: 530px;
+	top: 442px;
+	transition: top 1s ease-in-out;	
+	z-index: 11;
+
+}
+#scoop{
+
+	position: absolute;
+	display: none;
+	left: 560px;
+	top: 372px;
+	z-index: 12;
+	height: 200px;
+	width: 120px;
+	transform: rotate(-45deg);
+	transition: top 1s ease-in-out;
+
+}
+#driver{
+
+	position: absolute;
+	display: none;
+	left: 870px;
+	top: 387px;
+	z-index: 12;
+	height: 150px;
+	width: 20px;
+	transform: rotate(30deg);
+	transition: top 1s ease-in-out;
+
+}
+#mirrorCU{
+
+	position: absolute;
+	display: none;
+	left: 470px;
+	top: 70px;
+	z-index: 10;
+
+
+}
+#finalKey{
+
+	position: absolute;
+	display: none;
+	height: 90px;
+	width: 102px;
+	left: 1540px;
+	top: 48px;
+	z-index: 100;
+
+}
+#driverItem{
+
+	position: absolute;
+	display: none;
+	height: 140px;
+	width: 28px;
+	left: 1574px;
+	top: 164px;
+	z-index: 100;
+	transform: rotate(45deg);
+
+
+}
+#scoopItem{
+
+	position: absolute;
+	display: none;
+	height: 160px;
+	width: 90px;
+	left: 1536px;
+	top: 304px;
+	z-index: 100;
+	transform: rotate(45deg);
+
+
+}
+#pigEyeInt{
+
+	position: absolute;
+	display: none;
+	height: 100px;
+	width: 100px;
+	left: 1535px;
+	top: 476px;
+	z-index: 100;
+
+}
+#humanEyeInt{
+
+	position: absolute;
+	display: none;
+	height: 110px;
+	width: 110px;
+	left: 1531px;
+	top: 758px;
+	z-index: 100;
+
+}
+#statueEyeInt{
+
+	position: absolute;
+	display: none;
+	height: 104px;
+	width: 104px;
+	left: 1532px;
+	top: 615px;
+	z-index: 100;
+
+
+}
+
+
+.item:hover{
+
+	cursor: pointer;
+	scale: 0.96;
+	filter: brightness(0.8);
+
+}
+#finalClosetFin{
+
+	display: none;
+	position: absolute;
+	z-index: 2;
+	top: 198px;
+	left: 345px;
+	height: 647px;
+	width: 876px;
+
+
+}
+#lastHuman{
+
+	display: none;
+	position: absolute;
+	width : 115px;
+	height: 114px;
+	z-index: 2;
+	top: 550px;
+	left: 590px;
+
+}
+#lastStatue{
+
+	display: none;
+	position: absolute;
+	z-index: 2;
+	width: 107px;
+	height: 107px;
+	top: 550px;
+	left: 850px;
+
+}
+#lastPig{
+
+	display: none;
+	position: absolute;
+	z-index: 2;
+	width: 107px;
+	height: 107px;
+	top: 360px;
+	left: 725px;
+
+}
+#lastKeyDrop{
+
+	display: none;
+	position: absolute;
+	z-index: 3;
+	top: 430px;
+	left: 685px;
+
+}
+#finalKeyIn{
+
+	display: none;
+	position: absolute;
+	z-index: 10;
+	width: 102px;
+	height: 90px;
+	top: 378px;
+	left: 735px;
+
+}
+#replay{
+
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	width: 800px;
+	height: 400px;
+	left: 350px;
+	top: 250px;
+}
+#soundBut{
+	display: flex;
+	position: absolute;
+	z-index: 10000;
+	width: 100px;
+	height: 50px;
+	top: 40px;
+	left: 1370px;
+}
+</style>
+<body>
+
+	<div>
+		<img id = itemLoad src = "main/item.png">
+		<img id = background  src = "sorce/wall1.png">
+		<img onclick = "moveLeft()" class = look id = larrow src = "main/larrow.png">
+		<img onclick = "moveRight()" class = look id = rarrow src = "main/rarrow.png">
+		<img id = table src = "sorce/table.png">
+		<img id = leftPic src = "sorce/picture1.png">
+		<img id = rightPic src = "sorce/picture2.png">
+		<img onclick = 'pigKeyMap()' id = pigKey src = "sorce/pigKey.png">
+		<img class = item id = pigbigHead src = "sorce/pigInt.png">
+		<img id = pigEye src = "sorce/pigEyeIn.png">
+		<img onclick = "statueIn()" id = obStatue src = "sorce/obStatue.png">
+		<img onclick = 'collect()' id = finalCloset src = "sorce/finalCloset.png">
+		<img onclick = 'statueCloseLookOut()' class = item id = statueInt src = "sorce/statueInt.png">
+		<img onclick = 'InteractionSec()' id = statueEyeIn src = "sorce/statueEyeIn.png">
+		<img onclick = 'letMeOut()' id = exit src = "sorce/door.png">
+		<img id = candle src = "sorce/candle.png">
+		<img onclick = "closetCloseLook()" id = closet src = "sorce/closet.png">
+		<img onclick = "mirrorCloseLook()" id = mirror src = "sorce/mirror.png">
+		<img id = topClos src = "sorce/top.png">
+		<img id = barClos1 src = "sorce/block.png">
+		<img id = barClos2 src = "sorce/block.png">
+		<img id = barClos3 src = "sorce/block.png">
+		<img id = closet1 src = "sorce/closet1.png">
+		<img id = closet2 src = "sorce/closet2.png">
+		<img id = closet3 src = "sorce/closet3.png">
+		<img class = item id = scoop src = "sorce/scoop.png">
+		<img class = item id = driver src = "sorce/driver.png">
+		<img onclick = 'mirrorCloseLookOut()' class = item id = mirrorCU src = "sorce/mirrorCU.png">
+		<img onclick = 'choiceScoop()' class = item id = scoopItem src = "sorce/scoop.png">
+		<img onclick = 'choiceDriver()' class = item id = driverItem src = "sorce/driver.png">
+		<img class = item id = finalKey src = "sorce/doorKey.png">
+		<img onclick = 'choicePig()' class = item id = pigEyeInt src = "sorce/pigEye.png">
+		<img onclick = 'choiceHuman()'  class = item id = humanEyeInt src = "sorce/humanEye.png">
+		<img onclick = 'choiceStatue()' class = item id = statueEyeInt src = "sorce/statueEye.png">
+		<img onclick = 'EyeInput()' id = finalClosetFin src = "sorce/finalClosetFin.png">
+		<img id = lastHuman src = "sorce/humanEye.png">
+		<img id = lastStatue src = "sorce/statueEye.png">
+		<img id = lastPig src = "sorce/pigEye.png">
+		<img id = lastKeyDrop src = "sorce/lastKeyDrop.png">
+		<img id = finalKeyIn src = 'sorce/doorKey.png'>
+		<img id = end src = 'sorce/ending1.png'>
+		<div class = item onclick = 'ending()' id = endingBut></div>
+		<img class = item id = replay src = 'sorce/replayBut.png'>
+		<img onclick ='soundLevel()' class = item id = soundBut src = 'sorce/soundBut3.png'>
+		<audio id = bgm src = "audio/bgm.wav">
+		<audio id = look src = "audio/look.mp3">
+		<audio id = pigEyeSnd src = "audio/pigEye.mp3">
+		<audio id = closetIn src = 'audio/closetIn.mp3'>
+		<audio id = closetOut src = 'audio/closetOut.mp3'>
+		<audio id = humanEyeSnd src = 'audio/humanEye.mp3'>
+		<audio id = statueEyeSnd src = 'audio/statueEye.mp3'>
+		<audio id = candleSnd src = 'audio/candle.mp3'>
+		<audio id = endingSFX src = 'audio/endingSFX.mp3'>
+		<audio id = endingLaugh1 src = 'audio/endingLaugh1.mp3'>
+		<audio id = endingLaugh2 src = 'audio/endingLaugh2.mp3'>
+		<audio id = endingLaugh3 src = 'audio/endingLaugh3.mp3'>
+		<audio id = endingLaugh4 src = 'audio/endingLaugh4.mp3'>	
+		<audio id = lastKeySnd	src = 'audio/lastKey.mp3'>		
+		<audio id = endingHitBehind src = 'audio/endingHitBehind.wav'>
+		<audio id = pickUp src = 'audio/pickUp.mp3'>
+	</div>
+
+	<script type="text/javascript">
+		
+
+    let lookNow = 0;
+    const totalImages = 3;
+
+    function moveLeft() {
+      lookNow--;
+      if (lookNow < 0) {
+        lookNow = totalImages;
+      }
+      updateDisplay(); // lookNow 변경 후 updateDisplay 함수 호출
+      look.play();
+    };
+
+    function moveRight() {
+      lookNow++;
+      if (lookNow > totalImages) {
+        lookNow = 0;
+      }
+      updateDisplay(); // lookNow 변경 후 updateDisplay 함수 호출
+      console.log(lookNow);
+      look.play();
+    };
+
+
+    let soundLevelindex = 0;
+    const fullLevel = 3;
+
+    function soundLevel() {
+      soundLevelindex++;
+      if (soundLevelindex > fullLevel) {
+        soundLevelindex = 0;
+      }
+     	levelSound();
+     	bgm.play();
+     	console.log(soundLevelindex);
+     	bgm.loop = 'true';
+    };
+
+    function levelSound(){
+
+    	switch (soundLevelindex){
+    	case 1:
+    		soundBut.src = 'sorce/soundBut0.png';
+    		bgm.volume = 100/100;
+    		look.volume = 100/100;
+    		pigEyeSnd.volume = 100/100;
+    		closetIn.volume = 100/100;
+    		closetOut.volume = 100/100;
+    		humanEyeSnd.volume = 100/100;
+    		statueEyeSnd.volume = 100/100;
+    		candleSnd.volume = 100/100;
+    		endingSFX.volume = 100/100;
+    		endingLaugh1.volume = 100/100;
+    		endingLaugh2.volume = 100/100;
+    		endingLaugh3.volume = 100/100;
+    		endingLaugh4.volume = 100/100;
+    		lastKeySnd.volume = 100/100;
+    		endingHitBehind.volume = 100/100;
+    		pickUp.volume = 100/100;
+    		break;
+    	case 2:
+    		soundBut.src = 'sorce/soundBut1.png';
+    		bgm.volume = 66/100;
+    		look.volume = 66/100;
+    		pigEyeSnd.volume = 66/100;
+    		closetIn.volume = 66/100;
+    		closetOut.volume = 66/100;
+    		humanEyeSnd.volume = 66/100;
+    		statueEyeSnd.volume = 66/100;
+    		candleSnd.volume = 66/100;
+    		endingSFX.volume = 66/100;
+    		endingLaugh1.volume = 66/100;
+    		endingLaugh2.volume = 66/100;
+    		endingLaugh3.volume = 66/100;
+    		endingLaugh4.volume = 66/100;
+    		lastKeySnd.volume = 66/100;
+    		endingHitBehind.volume = 66/100;
+    		pickUp.volume = 66/100;
+    		break;
+    	case 3:
+    		soundBut.src = 'sorce/soundBut2.png';
+    		bgm.volume = 33/100;
+    		look.volume = 33/100;
+    		pigEyeSnd.volume = 33/100;
+    		closetIn.volume = 33/100;
+    		closetOut.volume = 33/100;
+    		humanEyeSnd.volume = 33/100;
+    		statueEyeSnd.volume = 33/100;
+    		candleSnd.volume = 33/100;
+    		endingSFX.volume = 33/100;
+    		endingLaugh1.volume = 33/100;
+    		endingLaugh2.volume = 33/100;
+    		endingLaugh3.volume = 33/100;
+    		endingLaugh4.volume = 33/100;
+    		lastKeySnd.volume = 33/100;
+    		endingHitBehind.volume = 33/100;
+    		pickUp.volume = 33/100;
+    		break;
+    	case 0:
+    		soundBut.src = 'sorce/soundBut3.png';
+    		bgm.volume = 0/100;
+    		look.volume = 0/100;
+    		pigEyeSnd.volume = 0/100;
+    		closetIn.volume = 0/100;
+    		closetOut.volume = 0/100;
+    		humanEyeSnd.volume = 0/100;
+    		statueEyeSnd.volume = 0/100;
+    		candleSnd.volume = 0/100;
+    		endingSFX.volume = 0/100;
+    		endingLaugh1.volume = 0/100;
+    		endingLaugh2.volume = 0/100;
+    		endingLaugh3.volume = 0/100;
+    		endingLaugh4.volume = 0/100;
+    		lastKeySnd.volume = 0/100;
+    		endingHitBehind.volume = 0/100;
+    		pickUp.volume = 0/100;
+    		break;    		
+    	}
+
+    }
+
+    function updateDisplay() {
+      switch (lookNow) {
+        case 0:
+          showInitialElements();
+          hideObStatueFinalCloset();
+          hideEscape();
+          hideCloset();
+          break;
+        case 1:
+          showObStatueFinalCloset();
+          hideInitialElements();
+          hideEscape();
+          hideCloset()
+          break;
+        case 2:
+          showEscape();
+          hideInitialElements();
+          hideObStatueFinalCloset();
+          hideCloset()
+          break;
+        case 3:
+        	showCloset()
+        	hideInitialElements()
+        	hideEscape()
+        	hideObStatueFinalCloset()
+        	break;
+
+      }
+    };
+
+    let scoopInter = 0;
+
+   
+    	function InteractionPri() {
+      switch (scoopInter) {
+        case 0:
+        		
+ 				  pickScoop();
+
+          break;
+       
+
+      	case 2 :
+      		//activated
+      		
+      		collectHumanEye();
+
+      		break;
+      }
+     }
+
+    let driverInter = 0;
+
+      function InteractionSec(){
+      	switch(driverInter){
+      	case 0 :
+      		//드라이버 들어올리는 인터렉션
+
+	      		pickDriver();
+
+      		break;
+      	
+      	case 2 :
+      		//activated
+
+      			collectStatueEye();
+
+      		break;
+      	}
+      }
+
+    let closeCloset = 0;
+
+    	function deInter(){
+    		switch(closeCloset){
+    		case 2 :
+    				
+    				getOut();
+
+    			break;
+    		}
+    	}
+
+   	 let collectEye = 0;
+
+   	 	function collect(){
+   	 		switch(collectEye){
+   	 		case 3 :
+
+   	 			//눈을 3개를 얻으면 어떻게 되지용?
+					finalClosetCloseLook()
+
+   	 			break;
+   	 		}
+
+
+   	 	}
+   	 	let selectEye = 0;
+   	 	function EyeInput(){
+
+
+   	 		switch(selectEye){
+
+   	 		case 0 :
+
+   	 			giveMeTheKey();
+
+   	 			break;
+   	 		case 1 :
+
+   	 			lastHuman.style.display = 'flex';
+   	 			humanEyeInt.style.display = 'none';
+   	 			selectEye = 0;
+   	 			giveMeTheKey();
+   	 			keydrop++
+   	 			console.log(keydrop);
+   	 			humanEyeSnd.play();
+
+   	 			break;
+
+   	 		case 2 :
+   	 		
+   	 			lastStatue.style.display = 'flex';
+   	 			statueEyeInt.style.display = 'none';
+   	 			selectEye = 0;
+   	 			giveMeTheKey();
+   	 			keydrop++
+   	 			console.log(keydrop);
+   	 			statueEyeSnd.play();
+
+   	 			break;
+
+   	 		case 3 :
+
+   	 			lastPig.style.display = 'flex';
+   	 			pigEyeInt.style.display = 'none';
+   	 			selectEye = 0;
+   	 			giveMeTheKey();
+   	 			keydrop++
+   	 			console.log(keydrop);
+   	 			pigEyeSnd.play();
+
+   	 			break;
+
+   	 		}
+
+
+   	 	}
+   	 	let keydrop = 0;
+
+   	 	function giveMeTheKey(){
+   	 		switch(keydrop){
+
+   	 		case 3:
+
+   	 			lastKeyDrop.style.display = 'flex';
+   	 			lastKeySnd.play();
+
+   	 		}
+   	 	}
+   	 	let selectKey = 0;
+   	 	
+   	 	function letMeOut(){
+   	 		switch(selectKey){
+
+   	 		case 1 :
+
+   	 			finalKey.style.display = 'none';
+   	 			finalKeyIn.style.display = 'flex';
+   	 			selectKey++
+   	 			console.log(selectKey);
+
+   	 			break;
+
+   	 		case 2 :
+
+   	 			finalKeyIn.style.display = 'none';
+   	 			exit.style.display = 'none';
+   	 			candle.style.display = 'none';
+   	 			end.style.display = 'flex';
+   	 			background.style.display = 'none';
+   	 			larrow.style.display = 'none';
+					rarrow.style.display = 'none';
+					endingBut.style.zIndex = '100';
+					endingHitBehind.play();
+
+   	 			break;
+
+   	 		}
+   	 	}
+
+   	 	let endingCount=0;
+
+   	 	function ending(){
+   	 		switch(endingCount){
+   	 		case 0:
+
+   	 			endingCount++
+   	 			console.log(endingCount);
+   	 			endingSFX.play();
+
+
+   	 			break;
+
+   	 		case 1:
+
+   	 			endingCount++
+   	 			end.src = 'sorce/ending2.png'
+   	 			console.log(endingCount);
+   	 			endingSFX.play();
+
+   	 			break
+   	 		case 2:
+
+   	 			endingCount++
+   	 			end.src = 'sorce/ending3.png'
+   	 			console.log(endingCount);
+   	 			endingSFX.play();
+   	 		
+   	 			break
+   	 		case 3:
+
+   	 			endingCount++
+   	 			end.src = 'sorce/ending4.png'
+   	 			console.log(endingCount);
+   	 			endingLaugh1.play();
+   	 			endingLaugh2.play();
+   	 			endingLaugh3.play();
+   	 			endingLaugh4.play();
+
+   	 			
+
+   	 			break
+   	 		case 4:
+
+   	 			replay.style.display = 'flex';
+   	 			lastKeySnd.play();
+
+   	 			break
+
+
+
+   	 		}
+   	 	}
+   	 	
+
+    function showInitialElements() {
+   
+      table.style.display = "flex";
+      leftPic.style.display = 'flex';
+      rightPic.style.display = 'flex';
+      pigKey.style.display = 'flex';
+      background.src = 'sorce/wall1.png';	
+			mirrorCU.style.display = 'none';
+   
+    };
+    function hideInitialElements() {
+    
+      table.style.display = "none";
+      leftPic.style.display = 'none';
+      rightPic.style.display = 'none';
+      pigKey.style.display = 'none';
+    
+    };
+
+    function showObStatueFinalCloset() {
+    
+      obStatue.style.display = 'flex';
+      finalCloset.style.display = 'flex';
+    
+    };
+    function hideObStatueFinalCloset() {
+      
+      obStatue.style.display = 'none';
+      finalCloset.style.display = 'none';
+    
+    };
+    function showEscape(){
+
+    	exit.style.display = "flex";
+    	candle.style.display = "flex";
+    	background.src = 'sorce/wall1.png';	
+			mirrorCU.style.display = 'none';
+
+    };
+    function hideEscape(){
+
+    	exit.style.display = "none";
+    	candle.style.display = "none";
+
+    };
+    function showCloset(){
+
+    	closet.style.display = 'flex';
+			mirror.style.display = 'flex';
+
+    };
+    function hideCloset(){
+
+    	closet.style.display = 'none';
+			mirror.style.display = 'none';
+
+    };
+    function pigKeyMap(){
+    	table.style.display = 'none';
+		leftPic.style.display = 'none';
+		rightPic.style.display = 'none';
+		pigKey.style.display = 'none';
+		larrow.style.display = 'none';
+		rarrow.style.display = 'none';
+		background.src = "sorce/tableInt.png"
+		pigbigHead.style.display = 'flex';
+    };
+    function statueIn(){
+
+		background.src = 'sorce/wall2.png';
+		obStatue.style.display = 'none';
+		finalCloset.style.display = 'none';
+		statueInt.style.display = 'flex';
+		statueEyeIn.style.display = 'flex';
+		larrow.style.display = "none";
+		rarrow.style.display = "none";
+
+    }
+   	function closetCloseLook(){
+
+   		closet.style.display = 'none';
+			mirror.style.display = 'none';
+			background.src = 'sorce/CUcloset.png';
+ 			topClos.style.display = 'flex';
+			barClos1.style.display = 'flex';
+			barClos2.style.display = 'flex';
+			barClos3.style.display = 'flex';
+			closet1.style.display = 'flex';
+			closet2.style.display = 'flex';
+			closet3.style.display = 'flex';
+			driver.style.display = 'flex';
+			scoop.style.display = 'flex';
+			larrow.style.display = 'none';
+			rarrow.style.display = 'none';
+
+   	}
+   	function mirrorCloseLook(){
+
+   		closet.style.display = 'none';
+			mirror.style.display = 'none';
+			background.src = 'sorce/mirrorWall.png';	
+			mirrorCU.style.display = 'flex';
+
+   	}
+   	function mirrorCloseLookOut(){
+   
+   			closet.style.display = 'flex';
+				mirror.style.display = 'flex';
+				background.src = 'sorce/wall1.png';	
+				mirrorCU.style.display = 'none';
+				InteractionPri();
+				console.log(collectEye);
+				console.log(scoopInter);
+
+  	}   			
+   	function collectHumanEye(){
+
+   			humanEyeInt.style.display = 'flex';
+				collectEye++
+				mirror.onclick = null;
+				humanEyeSnd.play();
+
+   	}
+   	
+   	function statueCloseLookOut(){
+
+   	background.src = 'sorce/wall1.png';
+		obStatue.style.display = 'flex';
+		finalCloset.style.display = 'flex';
+		statueInt.style.display = 'none';
+		statueEyeIn.style.display = 'none';
+		larrow.style.display = "flex";
+		rarrow.style.display = "flex";
+		console.log(collectEye);
+
+   	}
+   	function collectStatueEye(){
+
+   		background.src = 'sorce/wall1.png';
+			obStatue.style.display = 'flex';
+			finalCloset.style.display = 'flex';
+			statueInt.style.display = 'none';
+			statueEyeIn.style.display = 'none';
+			larrow.style.display = "flex";
+			rarrow.style.display = "flex";
+			obStatue.src = 'sorce/obStatueNoEye.png'
+			console.log(collectEye);
+   		statueEyeInt.style.display = 'flex';
+   		collectEye++
+			statueEyeIn.onclick = null;
+			statueEyeSnd.play();
+
+   	}
+   	function finalClosetCloseLook(){
+
+   		background.src = 'sorce/wall3.png'
+   		obStatue.style.display = 'none';
+     	finalCloset.style.display = 'none';
+     	finalClosetFin.style.display = 'flex';
+     	larrow.style.display = "none";
+			rarrow.style.display = "none";
+    
+   	}
+
+
+   	var state = "close" ;
+
+		closet1.onclick = function(){
+
+		
+		if (state == "close"){
+
+			closet1.style.top = "400px";
+			state = "open" ; 
+			closetIn.play();
+
+			setTimeout(function(){
+				barClos3.style.display = "none";
+			}, 1300) ;
+			setTimeout(function(){
+				barClos2.style.display = "none";
+			}, 1000) ;
+
+		}else if(state == "open"){
+
+			closet1.style.top = "250px";
+			state = "close" ;
+			closetOut.play();
+
+			setTimeout(function(){
+				barClos3.style.display = "flex";
+			}, 500) ;
+			setTimeout(function(){
+				barClos2.style.display = "flex";
+			}, 900) ;
+			
+			barClos1.style.display = "flex";
+
+		}	
+
+	};
+
+	closet2.onclick = function(){
+
+		if (state == "close"){
+
+			closet2.style.top = "500px";
+			state = "open" ; 
+			scoop.style.top = "545px";
+			driver.style.top = "550px";
+			closetIn.play();
+
+			barClos2.style.display = "none";
+			barClos3.style.display = "none";
+
+			console.log(scoopInter);
+			console.log(driverInter);
+
+		}else if(state == "open"){
+
+			closet2.style.top = "337px";
+			scoop.style.top = "382px";
+			driver.style.top = "387px";
+			closetOut.play();
+
+			console.log(scoopInter);
+			console.log(driverInter);
+			state = "close" ;
+
+			setTimeout(function(){
+				barClos3.style.display = "flex";
+			}, 800) ;
+			setTimeout(function(){
+				barClos2.style.display = "flex";
+			}, 850) ;
+			}
+
+		};
+
+	closet3.onclick = function(){
+
+		if (state == "close"){
+
+			closet3.style.top = "580px";
+			state = "open" ; 
+			
+			barClos3.style.display = "none";
+			closetIn.play();
+
+		}else if(state == "open"){
+
+			closet3.style.top = "442px";
+			state = "close" ;
+			closetOut.play();
+
+			setTimeout(function(){
+				barClos3.style.display = "flex";
+			}, 800) ;		
+		}	
+	}
+
+		function pickScoop(){
+
+			scoop.onclick = function(){
+				scoop.style.display = 'none';
+				scoopItem.style.display = 'flex';	
+				scoopInter++
+				closeCloset++
+				deInter();
+				console.log(scoopInter);
+				console.log(closeCloset);
+				pickUp.play();
+			}
+
+		}
+
+		function pickDriver(){
+
+			driver.onclick = function(){			
+				driver.style.display = 'none';
+				driverItem.style.display = 'flex';	
+				driverInter++
+				closeCloset++
+				deInter();
+				console.log(driverInter);
+				console.log(closeCloset);
+				pickUp.play();
+			}
+
+		}
+
+
+		pigbigHead.onclick = function(){
+
+				pigEyeInt.style.display = 'none';
+				table.style.display = 'flex';
+				leftPic.style.display = 'flex';
+				rightPic.style.display = 'flex';
+				pigKey.style.display = 'flex';
+				larrow.style.display = 'flex';
+				rarrow.style.display = 'flex';
+				background.src = "sorce/wall1.png"
+				pigbigHead.style.display = 'none';
+				pigEyeInt.style.display = 'flex';
+				pigKey.onclick = null;
+				collectEye++
+				pigKey.src = "sorce/pigIntAfter.png"
+				pigEyeSnd.play();
+
+			}
+
+		function getOut(){
+
+			closet.style.display = 'flex';
+			mirror.style.display = 'flex';
+			larrow.style.display = 'flex';
+			rarrow.style.display = 'flex';
+			background.src = 'sorce/wall1.png';
+ 			topClos.style.display = 'none';
+			barClos1.style.display = 'none';
+			barClos2.style.display = 'none';
+			barClos3.style.display = 'none';
+			closet1.style.display = 'none';
+			closet2.style.display = 'none';
+			closet3.style.display = 'none';
+			closet.onclick = null;
+			closetOut.play();
+
+		}
+		function choiceScoop(){
+
+			scoopItem.style.scale = 1.15
+			driverItem.style.scale = 1.00
+			humanEyeInt.style.scale = 1.00
+			statueEyeInt.style.scale = 1.00
+			pigEyeInt.style.scale = 1.00
+			finalKey.style.scale = 1.00
+
+			scoopInter = 2;
+			driverInter = 1;
+			console.log(scoopInter);
+			console.log(driverInter);
+
+		}
+		function choiceDriver(){
+
+			driverItem.style.scale = 1.15
+			scoopItem.style.scale = 1.00
+			humanEyeInt.style.scale = 1.00
+			statueEyeInt.style.scale = 1.00
+			pigEyeInt.style.scale = 1.00
+			finalKey.style.scale = 1.00
+			scoopInter = 1;
+			driverInter = 2;
+			console.log(scoopInter);
+			console.log(driverInter);
+		
+		}
+		function choiceHuman(){
+
+			humanEyeInt.style.scale = 1.15
+			statueEyeInt.style.scale = 1.00
+			pigEyeInt.style.scale = 1.00
+			driverItem.style.scale = 1.00
+			scoopItem.style.scale = 1.00
+			finalKey.style.scale = 1.00
+
+			selectEye = 1;
+			console.log(selectEye);
+
+		}
+		function choiceStatue(){
+
+			humanEyeInt.style.scale = 1.00
+			statueEyeInt.style.scale = 1.15
+			pigEyeInt.style.scale = 1.00
+			driverItem.style.scale = 1.00
+			scoopItem.style.scale = 1.00
+			finalKey.style.scale = 1.00
+
+			selectEye = 2;
+			console.log(selectEye);
+
+		}
+		function choicePig(){
+
+			humanEyeInt.style.scale = 1.00
+			statueEyeInt.style.scale = 1.00
+			pigEyeInt.style.scale = 1.15
+			driverItem.style.scale = 1.00
+			scoopItem.style.scale = 1.00
+			finalKey.style.scale = 1.00
+
+			selectEye = 3;
+			console.log(selectEye);
+
+		}
+		lastKeyDrop.onclick = function(){
+
+			finalCloset.src = "sorce/finalClosetFinReal.png";
+			finalKey.style.display = 'flex';
+			background.src = 'sorce/wall1.png'
+   		obStatue.style.display = 'flex';
+     	finalCloset.style.display = 'flex';
+     	finalClosetFin.style.display = 'none';
+
+    	
+    	lastHuman.style.display = 'none';
+			lastStatue.style.display = 'none';
+			lastPig.style.display = 'none';
+			lastKeyDrop.style.display = 'none';
+			larrow.style.display = 'flex';
+			rarrow.style.display = 'flex';
+
+		}
+
+	  finalKey.onclick = function(){
+
+	  	selectKey = 1;
+	  	humanEyeInt.style.scale = 1.00
+			statueEyeInt.style.scale = 1.00
+			pigEyeInt.style.scale = 1.00
+			driverItem.style.scale = 1.00
+			scoopItem.style.scale = 1.00
+			finalKey.style.scale = 1.15
+
+	  }
+
+	  replay.onclick = function(){
+
+	  	location.href = "index.html"
+
+	  }
+	  candle.onclick = function(){
+
+	  	candleSnd.play();
+
+	  }
+	  
+
+    updateDisplay();
+    InteractionPri();
+    InteractionSec();
+
+  </script>
+</body>
+</html>

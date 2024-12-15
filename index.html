@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+
+<style type="text/css">
+	
+#back{
+	position: absolute;
+	width: 1676 px;
+	height: 915 px;
+	z-index: 3;
+}
+#backpic{
+	position: absolute;
+	height: 900px;
+	width: 1500px;
+	margin: 0;
+}
+#phone{
+	position: absolute;
+	z-index: 9;
+	height: 50px;
+	width: 250px;
+	left: 650px;
+	top: 311px;
+}
+#phone:hover{
+	cursor: pointer;
+	filter: brightness(60%);
+}
+#speaker{
+	position: absolute;
+	z-index: 9;
+	height: 25px;
+	width: 55px;
+	left: 830px;
+	top: 480px;
+}
+#speaker:hover{
+	cursor: pointer;
+	filter: brightness(60%);
+}
+#playBut {
+
+	position: absolute;
+	width: 500px;
+	height: 250px;
+	top: 320px;
+	left: 550px;
+	z-index: 10;
+
+}
+#playBut:hover{
+	cursor: pointer;
+	filter: brightness(60%);
+	scale: 0.98;
+}
+#nextBut{
+	position: absolute;
+	width: 500px;
+	height: 250px;
+	top: 320px;
+	left: 550px;
+	z-index: 10;
+	display: none;
+}
+#nextBut:hover{
+	cursor: pointer;
+	filter: brightness(60%);
+	scale: 0.93;
+}
+#gameOver{
+
+	position: absolute;
+	left: 230px;
+	top: 180px;
+	width: 1078px;
+	height: 587px;
+	z-index: 10;
+	display: none;
+
+}
+.but:hover{
+
+	cursor: pointer;
+	filter: brightness(60%);
+	scale: 0.98;
+
+}
+#talkBox{
+
+	position: absolute;
+	width: 1363px;
+	height: 316px;
+	top: 570px;
+	left: 80px;
+	z-index: 10;
+	display: none;
+
+}
+#talkBox:hohver{
+	cursor: pointer;
+}
+#gateMask{
+	display: none;
+	position: absolute;
+	height: 75px;
+	width: 85px;
+	top: 260px;
+	left: 728px;
+	z-index: 6;
+
+}
+#gateMask:hover{
+
+		cursor: pointer;
+		filter: brightness(0.6);
+		scale : 0.95 ;
+
+}
+#CUgateMask{
+
+	display: none;
+	position: absolute;
+	height: 351px;
+	width: 400px;
+	left: 580px;
+	top: 270px;
+	z-index: 6;
+}
+.but:hover{
+
+	cursor: pointer;
+	filter: brightness(0.6);
+	scale : 0.95 ;
+
+
+}
+.but {
+	display : none;
+}
+#but1{
+
+	position: absolute;
+	height: 45px;
+	width: 25px;
+	top: 502px;
+	left: 728px;
+	z-index: 8;
+}
+#but2{
+	position: absolute;
+	height: 45px;
+	width: 25px;
+	top: 502px;
+	left: 758px;
+	z-index: 8;	
+}
+#but3{
+	position: absolute;
+	height: 45px;
+	width: 25px;
+	top: 502px;
+	left: 788px;
+	z-index: 8;
+}
+#but4{
+
+	position: absolute;
+	height: 45px;
+	width: 25px;
+	top: 502px;
+	left: 818px;
+	z-index: 8;
+}
+#leye {
+
+	position: absolute;
+	height: 30px;
+	width: 80px;
+	top: 380px;
+	left: 660px;
+	z-index: 8;
+}
+#reye {
+
+	position: absolute;
+	height: 30px;
+	width: 80px;
+	top: 380px;
+	left: 830px;
+	z-index: 8;
+}
+#door{
+
+	position: absolute;
+	display : none;
+	z-index: 8	;
+	height: 307px;
+	width: 180px;
+	left: 678px;
+	top: 357px;
+
+}
+#soundBut{
+	display: flex;
+	position: absolute;
+	z-index: 10000;
+	width: 100px;
+	height: 50px;
+	top: 40px;
+	left: 1370px;
+}
+#soundBut:hover{
+
+	cursor: pointer;
+
+}
+
+</style>
+
+<body>
+
+<audio id = "ring" src = "office/ring.wav"></audio>
+<audio id = "talk" src = "office/talk.wav"></audio>
+<p id = "message"></p>
+
+<div>
+	<img id = back src = 'main/item.png'>
+	<img id = backpic src = "office/1back.png">
+	<img id = phone src="office/1phone.png">
+	<img id = speaker src = "office/1speaker.png">
+	<img id = playBut src = "office/play.png">
+	<img id = nextBut src = "office/next.png">
+	<img id = talkBox src = 'office/talk1.png'>
+	<img class= but id = gameOver src = 'office/gameOver.png'>
+	<img id = gateMask src="gate/CUMask.png">
+	<img id = CUgateMask src="gate/intMask.png">
+	<img class = but id = but1 src = "gate/but.png" >
+	<img class = but id = but2 src = "gate/but.png" >
+	<img class = but id = but3 src = "gate/but.png" >
+	<img class = but id = but4 src = "gate/but.png" >
+	<img class = but id = leye src = "gate/leftEye.png" >
+	<img class = but id = reye src = "gate/rightEye.png" >
+	<img id = door src = "gate/door.png">
+	<audio id = streetSnd src = 'gate/streetSnd.mp3'></audio>
+	<img onclick ='soundLevel()'id = soundBut src = 'sorce/soundBut0.png'>
+</div>
+
+
+<script type="text/javascript">
+		
+	let talkBoxindex = 0;
+
+	function changeTalkBox(){
+		
+		switch(talkBoxindex){
+		case 1 :
+			talkBox.src = 'office/talk2.png';
+			talk.play();
+			break;
+
+		case 2 :
+			talk.play();
+			talkBox.src = 'office/talk3.png';			
+			break;
+
+		case 3 :
+			talk.play();
+			talkBox.src = 'office/talk4.png';
+			break;
+
+		case 4 :
+			talk.play();
+			talkBox.src = 'office/talk5.png';
+			break;
+
+		case 5 :
+			talk.play();
+			talkBox.src = 'office/talk6.png';
+			break;
+
+		case 6 :
+			talk.play();
+			talkBox.src = 'office/talk7.png';
+			break;
+
+		case 7 :
+
+			talkBox.style.display = 'none';
+			backpic.src = 'gate/back.png';
+			gateMask.style.display = 'flex';
+			streetSnd.play();
+			door.style.display = 'flex';
+			phone.style.display = 'none';
+			speaker.style.display = 'none';
+
+		}
+
+
+	}
+	
+	let soundLevelindex = 0;
+    const fullLevel = 3;
+
+    function soundLevel() {
+      soundLevelindex++;
+      if (soundLevelindex > fullLevel) {
+        soundLevelindex = 0;
+      }
+     	levelSound();
+     	console.log(soundLevelindex);
+     	streetSnd.loop = 'true';
+    };
+
+
+	function levelSound(){
+
+    	switch (soundLevelindex){
+    	case 0 :
+
+    		soundBut.src = 'sorce/soundBut0.png';
+    		streetSnd.volume = 100/100;
+    		ring.volume = 100/100;
+    		talk.volume = 100/100;
+
+    		break;
+
+    	case 1:
+    		
+    		soundBut.src = 'sorce/soundBut1.png';
+    		streetSnd.volume = 66/100;
+    		ring.volume = 66/100;
+    		talk.volume = 66/100;
+
+    		break;
+
+    	case 2 :
+
+    		soundBut.src = 'sorce/soundBut2.png';
+    		streetSnd.volume = 33/100;
+    		ring.volume = 33/100;
+    		talk.volume = 33/100;
+
+    		break;
+
+    	case 3:
+    		
+    		soundBut.src = 'sorce/soundBut3.png';
+    		streetSnd.volume = 0/100;
+    		ring.volume = 0/100;
+    		talk.volume = 0/100;
+
+    		break;
+    	}
+    }
+
+	const ring = document.getElementById('ring');
+	const message = document.getElementById('message');
+	const talk = document.getElementById('talk');
+	let	ringCount = 0;
+
+ 	const maxringCount = 3;
+
+ 	ring.addEventListener('ended',()=>{
+ 		ringCount++;
+ 		if (ringCount<maxringCount){
+ 			ring.play();
+ 		}else{
+ 			gameOver.style.display = 'flex';
+ 		}
+ 	})
+
+
+	playBut.onclick = function(){
+
+		ring.play();
+		playBut.style.display ='none';
+
+	}
+	
+
+	phone.onclick = function(){
+		ring.pause();
+		talk.play();
+		phone.style.transform = `rotate(${135}deg)`;
+		phone.style.top = '400px'
+		phone.style.left = '900px'
+		talkBox.style.display = 'flex';
+		
+	}
+	speaker.onclick = function(){
+		ring.pause();
+		talk.play();
+		talkBox.style.display = 'flex';
+		
+	}
+
+
+
+
+
+	gameOver.onclick = function(){
+
+		location.href = "index.html"
+
+
+	}
+	talkBox.onclick = function(){
+		talkBoxindex++
+		changeTalkBox();
+		console.log(talkBoxindex)
+	};
+
+
+	gateMask.onclick = function(){
+
+		backpic.src = "gate/CUback.png"
+		gateMask.style.display = 'none';
+		CUgateMask.style.display='flex';
+		but1.style.display = 'flex';
+		but2.style.display = 'flex';
+		but3.style.display = 'flex';
+		but4.style.display = 'flex';
+		leye.style.display = 'flex';
+		reye.style.display = 'flex';
+		door.style.display = 'none';
+
+	}
+	
+
+	document.getElementById('but1').addEventListener('click',()=>handleClick(1));
+	document.getElementById('but2').addEventListener('click',()=>handleClick(2));
+	document.getElementById('but3').addEventListener('click',()=>handleClick(3));
+	document.getElementById('but4').addEventListener('click',()=>handleClick(4));
+	document.getElementById('leye').addEventListener('click',()=>handleClick(5));
+	document.getElementById('reye').addEventListener('click',()=>handleClick(6));
+
+
+
+	let correctOrder = [5,6,1,3,4,2] ;
+	let currentStep = 0;
+
+	function handleClick(buttonNumber){
+		if(buttonNumber === correctOrder [currentStep]){
+
+			currentStep++;
+			
+			if(currentStep === correctOrder.length){
+				
+				backpic.src = "gate/back.png";	
+				CUgateMask.style.display='none';
+				but1.style.display = 'none';
+				but2.style.display = 'none';
+				but3.style.display = 'none';
+				but4.style.display = 'none';
+				leye.style.display = 'none';
+				reye.style.display = 'none';
+				gateMask.style.display = 'flex';
+				door.classList.add('but');
+				door.style.display = 'flex';
+
+				door.onclick = function(){
+
+					location.href = "main.html";
+
+				}
+
+			}
+			
+			}else{
+
+				currentStep = 0;
+				
+			
+			}
+		}
+	
+
+	
+
+</script>
+
+</body>
+</html>
